@@ -1,0 +1,14 @@
+.gradient-custom {
+    background-image: url(../img/banner/bradcam.png);
+    background: linear-gradient(to right, #0062E6, #33AEFF);
+    }
+    
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
