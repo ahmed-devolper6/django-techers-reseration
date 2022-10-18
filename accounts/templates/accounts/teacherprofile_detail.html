@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block body %}
+    
+ 
+    <!-- bradcam_area  -->
+    <div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>{{object.name}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+
+    <div class="job_details_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="job_details_header">
+                        <div class="single_jobs white-bg d-flex justify-content-between">
+                            <div class="jobs_left d-flex align-items-center">
+                                <div class="thumb">
+                                    <img src="{{object.image.url}}"  alt="" style="width: 100%;" style = "height: 100%;">
+                                </div>
+                                <div class="jobs_conetent">
+                                    <a href="#"><h4>{{object.name}}</h4></a>
+                                    <div class="links_locat d-flex align-items-center">
+                                        <div class="location">
+                                            <p> <i class="fa fa-clock-o"></i> {{object.city}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="jobs_right">
+                                <div class="apply_now">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="descript_wrap white-bg">
+                        <div class="single_wrap">
+                            <h4>الخبره</h4>
+                            <p>{{object.exprince}}</p>
+                        </div>
+                        <div class="single_wrap">
+                            <h4>التعليم</h4>
+                            <p>
+                                {{object.educitons}}
+                            </p>
+                        </div>
+                        <div class="single_wrap">
+                            <h4>الواتساب</h4>
+                            <a href = 'wa.link/3jx41y'>
+                                {{object.number}}
+                            </a>
+                            
+                        </div>
+                        <a class="btn btn-primary" href="{% url 'accounts:pr' %}" role="button">اطلب</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+{% endblock body %}

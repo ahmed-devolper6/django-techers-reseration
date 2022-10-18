@@ -1,0 +1,91 @@
+{% extends 'base.html' %} 
+{% block body %}
+
+
+  <section class="order-form my-4 mx-4">
+    <div class="container pt-4">
+
+      <div class="row">
+        <div class="col-12">
+          <h1>يمكنك طلب المدرس من هنا</h1>
+          <span>املئ الفقرات لي ايصال طلبك</span>
+          <hr class="mt-1">
+        </div>
+        <form action="" method="post">
+          {% csrf_token %}
+        <div class="col-12">
+          {% csrf_token %}
+          <div class="row mx-4">
+            <div class="col-12 mb-2">
+              <label class="order-form-label">المدرس</label>
+            </div>
+            <div class="col-12 mb-2">
+              <select name="techer" id="id_techer">
+                <option value="" selected=""></option>
+                <option value="1">techer1 - احمد تاج السر</option>
+              </select>
+            </div>
+           <div class="col-12 mb-2">
+              <label class="order-form-label">اسمك</label>
+            </div>
+            <div class="col-12 col-sm-6">
+              <input class="order-form-input" name="name" placeholder="الاول">
+            </div>
+            <div class="col-12 col-sm-6 mt-2 mt-sm-0">
+            </div>
+          </div>
+          <div class="row mt-3 mx-4">
+            <div class="col-12">
+              <label class="order-form-label">رقم هاتفك</label>
+            </div>
+            <div class="col-12">
+              <input class="order-form-input" name="number" placeholder=" ">
+            </div>
+          </div>
+          <div class="row mt-3 mx-4">
+            <div class="col-12">
+              <label class="order-form-label">رقم هاتف ولي الامر</label>
+            </div>
+            <div class="col-12">
+              <input class="order-form-input" name="number2" placeholder=" ">
+            </div>
+          </div>
+
+          <div class="row mt-3 mx-4">
+            <div class="col-12">
+              <label class="order-form-label" for="date-picker-example">الموعد</label>
+            </div>
+            <div class="col-12">
+              <input class="order-form-input datepicker" name="date" placeholder="اكتب التاريخ" type="text"
+                id="date-picker-example">
+            </div>
+          </div>
+
+          <div class="row mt-3 mx-4">
+            <div class="col-12">
+              <label class="order-form-label">عنوانك</label>
+              <select name="city" required="" id="id_city">
+                <option value="" selected="">المدنيه</option>
+                <option value="Karthum">Karthum</option>
+                <option value="omdrman">omdrman</option>
+                <option value="bahri">bahri</option>
+                <option value="sharq alnel">sharq alnel</option>
+              </select>
+            </div>
+            <div class="col-12 mt-2">
+              <input class="order-form-input" name="regin" placeholder="المنطقه">
+            </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <button type="submit" id="btnSubmit" class="btn btn-dark d-block mx-auto btn-submit">Submit</button>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+
+    </div>
+  
+  </section>
+
+  {% endblock body %}
